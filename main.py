@@ -95,14 +95,14 @@ def dispatch(line: str):
             cmd_request_status(int(rid))
             return
 
-    if sub == "connect":
-        rid = _get_opt(rest, "--id")
-        if not rid:
-            raise VCLRPCError("Usage: request connect --id <request_id> [--copy]")
+        if sub == "connect":
+            rid = _get_opt(rest, "--id")
+            if not rid:
+                raise VCLRPCError("Usage: request connect --id <request_id> [--copy]")
 
-        copy_flag = "--copy" in rest
-        cmd_request_connect(int(rid), copy=copy_flag)
-        return
+            copy_flag = "--copy" in rest
+            cmd_request_connect(int(rid), copy=copy_flag)
+            return
 
         if sub == "end":
             rid = _get_opt(rest, "--id")
