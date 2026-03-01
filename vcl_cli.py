@@ -16,7 +16,7 @@ from vcl.commands import (
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="vcl", description="NCSU VCL CLI")
+    p = argparse.ArgumentParser(prog="vclctl", description="vclctl")
     p.add_argument("--json", action="store_true", help="Print raw JSON")
     sub = p.add_subparsers(dest="cmd", required=True)
 

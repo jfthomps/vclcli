@@ -1,5 +1,5 @@
 """
-VCL CLI — Startup Banner
+vclctl — Startup Banner
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ VCL_ART = """\
   ╚═══╝   ╚═════╝╚══════╝
 """
 
-APP_LABEL = "VCL CLI"
+APP_LABEL = "vclctl"
 VERSION = "v1.0.0"
 
 
@@ -118,10 +118,10 @@ def _right_panel(recent_activity: list[dict] | None = None) -> Panel:
     cmds.add_column(style="dim")
 
     quick_cmds = [
-        ("vcl> images list", "list available images"),
-        ("vcl> request list", "show active reservations"),
-        ("vcl> request connect --id <id>", "get SSH/RDP connection info"),
-        ("vcl> request create --image-id <id>", "create a new reservation"),
+        ("vclctl> images list", "list available images"),
+        ("vclctl> request list", "show active reservations"),
+        ("vclctl> request connect --id <id>", "get SSH/RDP connection info"),
+        ("vclctl> request create --image-id <id>", "create a new reservation"),
     ]
     for cmd, desc in quick_cmds:
         cmds.add_row(cmd, desc)

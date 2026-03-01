@@ -57,7 +57,7 @@ def dispatch(line: str):
         raise SystemExit(0)
 
     if tokens[0] == "help":
-        show_help_panel(HELP_TEXT, title="VCL Terminal Help")
+        show_help_panel(HELP_TEXT, title="vclctl Help")
         return
 
     if tokens[0] == "test":
@@ -200,7 +200,7 @@ class VCLCompleter(Completer):
 
 
 def main():
-    # show_help_panel("[bold]NCSU VCL Terminal[/bold]\nType 'help' for commands.", title="vcl")
+    # show_help_panel("[bold]vclctl[/bold]\nType 'help' for commands.", title="vclctl")
     show_startup_banner(username=os.getenv("USER"))
 
     session = PromptSession(
@@ -211,7 +211,7 @@ def main():
 
     while True:
         try:
-            line = session.prompt("vcl> ").strip()
+            line = session.prompt("vclctl> ").strip()
             dispatch(line)
         except SystemExit:
             console.print("[bold]bye![/bold]")
