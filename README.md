@@ -3,16 +3,13 @@
 vclctl is a modern terminal interface for managing Apache VCL reservations.  
 It allows users to **browse available VM images**, **create and monitor reservations**, and **connect to virtual machines via SSH/RDP**, all without using the web interface.
 
-<img src="./docs/screenshots/logo.png" alt="VCL Logo" width="420" />
+<div align="center">
+  <img src="./docs/screenshots/logo.png" alt="VCL Logo" width="420" />
 
-`<br>`{=html}
-
-![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
-![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey?style=flat-square)
-
-`<br>`{=html}
-:::
+  ![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=flat-square)
+  ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+  ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey?style=flat-square)
+</div>
 
 Built with Python and Rich TUI, vclctl provides a developer-friendly, interactive workflow with autocomplete, structured output, and clipboard integration.
 
@@ -232,7 +229,7 @@ Type `help` to see all available commands.
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
-`<sub>`{=html}Built for NCSU students. Not affiliated with or endorsed
-by NC State University.`</sub>`{=html}
-:::
+<div align="center">
+Built for NCSU students. Not affiliated with or endorsed
+by NC State University.
+</div>
