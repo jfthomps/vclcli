@@ -229,6 +229,13 @@ Type `help` to see all available commands.
 
 ------------------------------------------------------------------------
 
+<details>
+    <summary>
+        Video Example
+    </summary>
+    <video src="https://drive.google.com/file/d/1qeyX6xpzNJELhoRuGjTZHxH1hEN4OMtX/view?usp=sharing">
+</details>
+
 <div align="center">
 Built for NCSU students. Not affiliated with or endorsed
 by NC State University.
