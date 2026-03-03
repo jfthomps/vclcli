@@ -233,7 +233,7 @@ Type `help` to see all available commands.
     <summary>
         Video Example
     </summary>
-    <video src="https://drive.google.com/file/d/1qeyX6xpzNJELhoRuGjTZHxH1hEN4OMtX/view?usp=sharing">
+    <video src="https://github.com/user-attachments/assets/135c56c1-08be-43f1-912a-a3824fe40bb4">
 </details>
 
 <div align="center">
