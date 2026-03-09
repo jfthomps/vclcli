@@ -193,7 +193,7 @@ def cmd_request_connect(
             client_ip = res['ip']
 
     if not client_ip:
-        raise VCLRPCError("Missing client IP. Provide --client-ip or set VCL_CLIENT_IP.")
+        raise VCLRPCError("Failed to get client IP from call to XMLRPCgetIP")
 
     with console.status("[bold green]Fetching connect data...[/bold green]"):
         res = call("XMLRPCgetRequestConnectData", [int(request_id), client_ip])

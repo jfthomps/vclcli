@@ -39,7 +39,6 @@ Env:
   VCL_TOKEN (required)
   VCL_URL (optional)
   VCL_VERIFY_SSL (optional, default true)
-  VCL_CLIENT_IP (required for request connect)
 """
 
 

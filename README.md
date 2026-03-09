@@ -87,10 +87,6 @@ Set the following before running the CLI.
   --------------------- --------------------- ---------------------------
   `VCL_TOKEN`           ✅ Yes                Your VCL API bearer token
 
-  `VCL_CLIENT_IP`       ✅ For `connect`      Your public IP address
-                                              (used for connection
-                                              whitelisting)
-
   `VCL_URL`             No                    Override API endpoint
 
   `VCL_VERIFY_SSL`      No                    Set to `false` to disable
@@ -103,7 +99,6 @@ Set the following before running the CLI.
 ``` bash
 # required
 export VCL_TOKEN="your_token_here"
-export VCL_CLIENT_IP="your_public_ip"
 
 # optional (from .env.example)
 export VCL_URL="https://vcl.ncsu.edu/scheduling/index.php?mode=xmlrpccall"
