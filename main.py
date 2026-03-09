@@ -11,6 +11,7 @@ from prompt_toolkit.completion import Completer, Completion
 
 from vcl.commands import (
     cmd_test,
+    cmd_getIP,
     cmd_images_list,
     cmd_request_list,
     cmd_request_connect,
@@ -24,6 +25,7 @@ HELP_TEXT = """[bold]Commands[/bold]
 
   [cyan]help[/cyan]
   [cyan]test[/cyan]
+  [cyan]getIP[/cyan]
   [cyan]images list[/cyan]
   [cyan]request list[/cyan]
   [cyan]request create --image-id <id> [--duration <min>] [--start now][/cyan]
@@ -62,6 +64,10 @@ def dispatch(line: str):
 
     if tokens[0] == "test":
         cmd_test()
+        return
+
+    if tokens[0] == "getIP":
+        cmd_getIP()
         return
 
     if tokens[0] == "images" and len(tokens) >= 2 and tokens[1] == "list":
@@ -125,7 +131,7 @@ class VCLCompleter(Completer):
     - If 0 or multiple matches exist, no completion is shown (no suggestion menu).
     """
 
-    TOP = ["help", "test", "images", "request", "exit", "quit"]
+    TOP = ["help", "test", "getIP", "images", "request", "exit", "quit"]
     IMAGES_SUB = ["list"]
     REQUEST_SUB = ["list", "create", "status", "connect", "end", "end-all"]
 

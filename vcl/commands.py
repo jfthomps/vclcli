@@ -15,6 +15,9 @@ def cmd_test(*, json: bool = False):
     else:
         console.print(Panel.fit(f"[green]success[/green]\n{res}", title="XMLRPCtest"))
 
+def cmd_getIP(*, json: bool = False):
+    res = call("XMLRPCgetIP", [])
+    console.print(Panel.fit(f"[green]success[/green]\n{res['ip']}", title="XMLRPCgetIP"))
 
 def cmd_images_list(*, json: bool = False):
     with console.status("[bold green]Fetching images...[/bold green]"):
@@ -185,7 +188,9 @@ def cmd_request_connect(
     copy: bool = False,   # NEW: optional clipboard copy
 ):
     if client_ip is None:
-        client_ip = os.getenv("VCL_CLIENT_IP")
+        res = call("XMLRPCgetIP", [])
+        if res['status'] == 'success':
+            client_ip = res['ip']
 
     if not client_ip:
         raise VCLRPCError("Missing client IP. Provide --client-ip or set VCL_CLIENT_IP.")
